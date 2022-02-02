@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Buttoncontainer from '../buttoncontainer/buttoncontainer';
+import Cardcontainer from '../cardcontainer/cardcontainer';
 
 const Maincontent=(props)=> {
   const buttonlist = [
@@ -37,6 +38,7 @@ const Maincontent=(props)=> {
         activebtn={activebtn}
         setactivebtn={setactivebtn}
       />
+      <Cardcontainer/>
     </div>
   );
 }
