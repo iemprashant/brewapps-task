@@ -2,45 +2,503 @@ import React, { useState } from 'react';
 import Buttoncontainer from '../buttoncontainer/buttoncontainer';
 import Cardcontainer from '../cardcontainer/cardcontainer';
 
-const Maincontent=(props)=> {
-  const buttonlist = [
-    { id: 1, title: '24h Training' },
+const Maincontent = (props) => {
+  const datalist = [
+    {
+      id: 1,
+      title: '24h Training',
+      content: [
+        {
+          id: 1,
+          img: 'img1',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
+    },
     {
       id: 2,
       title: 'Latest Shows',
+      content: [
+        {
+          id: 1,
+          img: 'img1',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img2',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
     {
       id: 3,
       title: 'Most Popular',
+      content: [
+        {
+          id: 1,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
     {
       id: 4,
       title: 'In Genesis',
+      content: [
+        {
+          id: 1,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img2',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
     {
       id: 5,
       title: 'In Temple',
+      content: [
+        {
+          id: 1,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img3',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
     {
       id: 6,
       title: 'In Void',
+      content: [
+        {
+          id: 1,
+          img: 'img1',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img1',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
     {
       id: 7,
       title: '#BAYC',
+      content: [
+        {
+          id: 1,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 2,
+          img: 'img2',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 3,
+          img: 'img2',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 4,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 5,
+          img: 'img3',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 6,
+          img: 'img1',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+        {
+          id: 7,
+          img: 'img2',
+          heading: 'leg bar',
+          para: '@0x2bc08c',
+          subpara: '@0x2bc08c',
+        },
+        {
+          id: 8,
+          img: 'img1',
+          heading: 'Meta Trap House',
+          para: '@freezecorle',
+          subpara: '@0x890aac',
+        },
+        {
+          id: 9,
+          img: 'img3',
+          heading: 'Girls Gone Wild',
+          para: '@0xbe0fad52',
+          subpara: '@0xbe0fad52',
+        },
+      ],
     },
   ];
-  const [activebtn, setactivebtn] = useState(1);
+  const [activebtnid, setactivebtnid] = useState(1);
   return (
-    <div className='py-3 '>
+    <div>
       <Buttoncontainer
-        buttonlist={buttonlist}
-        activebtn={activebtn}
-        setactivebtn={setactivebtn}
+        datalist={datalist}
+        activebtnid={activebtnid}
+        setactivebtnid={setactivebtnid}
       />
-      <Cardcontainer/>
+      <Cardcontainer cardlist={datalist[activebtnid-1].content} />
     </div>
   );
-}
+};
 
 export default Maincontent;

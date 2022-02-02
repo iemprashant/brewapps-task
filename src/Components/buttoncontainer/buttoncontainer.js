@@ -1,16 +1,16 @@
 import React from 'react';
 import Button from '../button/button';
-import './buttoncontainer.css';
-function buttoncontainer({ buttonlist, activebtn, setactivebtn }) {
+
+function buttoncontainer({ datalist, activebtnid, setactivebtnid }) {
   return (
-    <div className="d-flex flex-wrap">
-      {buttonlist.map((data) => {
+    <div className=" p-2 d-flex flex-wrap">
+      {datalist.map((data) => {
         return (
           <Button
             id={data.id}
             title={data.title}
-            active={data.id === activebtn ? true : false}
-            setactivebtn={setactivebtn}
+            active={data.id === activebtnid ? true : false}
+            setactive={setactivebtnid}
           />
         );
       })}

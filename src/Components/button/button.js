@@ -1,6 +1,5 @@
 import React from 'react';
-import './button.css';
-function Button({ id, title, active, setactivebtn }) {
+function Button({ id, title, active, setactive }) {
   return (
     <button
       type="button"
@@ -9,7 +8,7 @@ function Button({ id, title, active, setactivebtn }) {
         (active ? 'btn-dark' : 'btn-light')
       }
       key={id}
-      onClick={() => setactivebtn(id)}
+      onClick={() => setactive(id)}
     >
       {title}
     </button>
